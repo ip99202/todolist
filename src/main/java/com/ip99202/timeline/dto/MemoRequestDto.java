@@ -1,4 +1,4 @@
-package com.ip99202.todolist.dto;
+package com.ip99202.timeline.dto;
 
 import lombok.Getter;
 
