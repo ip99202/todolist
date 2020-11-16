@@ -1,5 +1,6 @@
-package com.ip99202.todolist.domain;
+package com.ip99202.timeline.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -20,7 +21,13 @@ public class Memo extends Timestamped {
     @Column(nullable = false)
     private String content;
 
+    @Builder
     public Memo(String name, String content) {
+        this.name = name;
+        this.content = content;
+    }
+
+    public void update(String name, String content) {
         this.name = name;
         this.content = content;
     }

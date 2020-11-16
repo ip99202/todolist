@@ -1,4 +1,4 @@
-package com.ip99202.todolist.domain;
+package com.ip99202.timeline.domain;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class Timestamped {
+public abstract class Timestamped {
 
     @CreatedDate
-    private LocalDateTime createdDate;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    private LastModifiedDate modifiedDate;
+    private LocalDateTime modifiedAt;
 }
